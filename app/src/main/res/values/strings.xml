@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FirestoreExample</string>
+    <string name="didn_t_get_any_data_yet">Didn\'t get any data yet</string>
+</resources>
