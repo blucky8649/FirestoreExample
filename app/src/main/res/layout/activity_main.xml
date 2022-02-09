@@ -1,20 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="16dp"
         tools:context=".MainActivity">
 
-    <TextView
-
-            android:id="@+id/tvData"
+    <EditText
+            android:id="@+id/etFirstName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/didn_t_get_any_data_yet"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            android:ems="10"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+
+    <EditText
+            android:id="@+id/etAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/age"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+
+    <Button
+            android:id="@+id/btnUploadData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/save_to_database"
+            app:layout_constraintEnd_toEndOf="@+id/etAge"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/etAge"
+            app:layout_constraintTop_toBottomOf="@+id/etAge" />
+
+    <Button
+            android:id="@+id/btnRetrieveData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/retrieve_data"
+            app:layout_constraintEnd_toEndOf="@+id/btnUploadData"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/btnUploadData"
+            app:layout_constraintTop_toBottomOf="@+id/btnUploadData" />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRetrieveData">
+
+        <TextView
+                android:id="@+id/tvPersons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person_data"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
